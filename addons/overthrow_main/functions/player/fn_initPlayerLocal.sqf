@@ -80,9 +80,9 @@ if((isServer || count ([] call CBA_fnc_players) == 1) && (server getVariable ["S
 	if (isServer || count ([] call CBA_fnc_players) == 1) then {
 		sleep 1;
 		if ((["ot_start_autoload", 0] call BIS_fnc_getParamValue) == 1) then {
-			server setVariable ["OT_difficulty",["ot_start_difficulty", 1] call BIS_fnc_getParamValue,true];
+			server setVariable ["OT_difficulty",["ot_start_difficulty", 2] call BIS_fnc_getParamValue,true];
 			server setVariable ["OT_fastTravelType",["ot_start_fasttravel", 1] call BIS_fnc_getParamValue,true];
-			server setVariable ["OT_fastTravelRules",["ot_start_fasttravelrules", 1] call BIS_fnc_getParamValue,true];
+			server setVariable ["OT_fastTravelRules",["ot_start_fasttravelrules", 2] call BIS_fnc_getParamValue,true];
 			[] remoteExec ['OT_fnc_loadGame',2,false];
 		} else {
 			createDialog "OT_dialog_start";
@@ -91,9 +91,10 @@ if((isServer || count ([] call CBA_fnc_players) == 1) && (server getVariable ["S
 }else{
 	"Loading" call OT_fnc_notifyStart;
 };
-OT_showPlayerMarkers = (["ot_showplayermarkers", 1] call BIS_fnc_getParamValue) isEqualTo 1;
+OT_showPlayerMarkers = (["ot_showplayermarkers", 0] call BIS_fnc_getParamValue) isEqualTo 1;
 OT_showTownChange = (["ot_showtownchange", 1] call BIS_fnc_getParamValue) isEqualTo 1;
-OT_showEnemyGroups = (["ot_showenemygroups", 1] call BIS_fnc_getParamValue) isEqualTo 1;
+OT_showEnemyGroups = (["ot_showenemygroups", 0] call BIS_fnc_getParamValue) isEqualTo 1;
+ot_disable_randomization = (["ot_disable_randomization", 1] call BIS_fnc_getParamValue) isEqualTo 1;
 
 waitUntil {sleep 1;!isNil "OT_NATOInitDone"};
 

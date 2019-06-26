@@ -46,7 +46,7 @@ class Params {
 		title = "Autoload a save or start a new game";
 		values[] = {0, 1};
 		texts[] = {"No", "Yes"};
-		default = 1;
+		default = 0;
 	};
 	class ot_start_difficulty {
 		title = "Game difficulty (Only with autoload)";
@@ -72,7 +72,7 @@ class Params {
 		texts[] = {"Yes", "No"};
 		default = 0;
 	};
-	class ot_showenemygroup {
+	class ot_showenemygroups {
 		title = "Show known enemy groups on map";
 		values[] = {1,0};
 		texts[] = {"Yes", "No"};
@@ -96,6 +96,6 @@ class Params {
 			title = "Disable gear randomization";
 			values[] = {0, 1};
 			texts[] = {"No", "Yes"};
-			default = 0;
+			default = 1;
 	};
 };
