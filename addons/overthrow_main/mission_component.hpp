@@ -46,13 +46,13 @@ class Params {
 		title = "Autoload a save or start a new game";
 		values[] = {0, 1};
 		texts[] = {"No", "Yes"};
-		default = 0;
+		default = 1;
 	};
 	class ot_start_difficulty {
 		title = "Game difficulty (Only with autoload)";
 		values[] = {0, 1, 2};
 		texts[] = {"Easy", "Normal", "Hard"};
-		default = 1;
+		default = 2;
 	};
 	class ot_start_fasttravel {
 		title = "Fast Travel (Only with autoload)";
@@ -64,19 +64,19 @@ class Params {
 		title = "Fast Travel Rules (Only with autoload)";
 		values[] = {0, 1, 2};
 		texts[] = {"Open", "No Weapons", "Restricted"};
-		default = 1;
+		default = 2;
 	};
 	class ot_showplayermarkers {
 		title = "Show Player Markers on HUD";
 		values[] = {1,0};
 		texts[] = {"Yes", "No"};
-		default = 1;
+		default = 0;
 	};
 	class ot_showenemygroup {
 		title = "Show known enemy groups on map";
 		values[] = {1,0};
 		texts[] = {"Yes", "No"};
-		default = 1;
+		default = 0;
 	};
 	class ace_medical_level {
         title = "ACE Medical Level";
@@ -90,6 +90,12 @@ class Params {
         ACE_setting = 1;
         values[] = {0, 1, 2};
         texts[] = {"None", "Players Only", "All"};
-        default = 1;
+        default = 2;
     };
+	class ot_disable_randomization {
+			title = "Disable gear randomization";
+			values[] = {0, 1};
+			texts[] = {"No", "Yes"};
+			default = 0;
+	};
 };
