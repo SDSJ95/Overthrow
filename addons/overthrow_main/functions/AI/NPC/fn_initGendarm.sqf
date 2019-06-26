@@ -17,7 +17,7 @@ _unit addEventHandler ["HandleDamage", {
 	};
 }];
 
-if ((["ot_disable_randomization", 1] call BIS_fnc_getParamValue) == 1) then {
+if ((["ot_disable_randomization", 1] call BIS_fnc_getParamValue) == 0) then {
 	if((random 100) < 75) then {
 	_unit setUnitLoadout [_unit call OT_fnc_getRandomLoadout, true];
 	};

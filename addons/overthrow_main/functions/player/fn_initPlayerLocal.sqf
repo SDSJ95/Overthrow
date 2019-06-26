@@ -94,7 +94,6 @@ if((isServer || count ([] call CBA_fnc_players) == 1) && (server getVariable ["S
 OT_showPlayerMarkers = (["ot_showplayermarkers", 0] call BIS_fnc_getParamValue) isEqualTo 1;
 OT_showTownChange = (["ot_showtownchange", 1] call BIS_fnc_getParamValue) isEqualTo 1;
 OT_showEnemyGroups = (["ot_showenemygroups", 0] call BIS_fnc_getParamValue) isEqualTo 1;
-ot_disable_randomization = (["ot_disable_randomization", 1] call BIS_fnc_getParamValue) isEqualTo 1;
 
 waitUntil {sleep 1;!isNil "OT_NATOInitDone"};
 

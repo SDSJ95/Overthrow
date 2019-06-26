@@ -93,7 +93,7 @@ class Params {
         default = 2;
     };
 	class ot_disable_randomization {
-			title = "Disable gear randomization";
+			title = "Disable weapon randomization";
 			values[] = {0, 1};
 			texts[] = {"No", "Yes"};
 			default = 1;
